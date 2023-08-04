@@ -1,0 +1,131 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+html{
+    background: hsl(252, 30%, 95%);
+}
+
+
+.container{
+    width: 92%;
+    display: flex;
+    justify-content: center;
+    flex-direction:column;
+    align-items: center;
+    border-radius: 1rem;
+    margin-top: 2rem; 
+}
+h2{
+  font-family: Tahoma;
+  font-size:2rem;
+  padding: 1rem 0;
+  font-weight: 500;
+}
+header{
+width:100%;
+background:grey;
+position:fixed;
+top:0;
+text-align:center;
+}
+.container > div{
+    width: 90%;
+    height:70%;
+    margin: auto;
+    display: flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    padding-top: 10%;
+}
+ .container > div .info{
+    width: 100%;
+    margin:2rem;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    gap: 5rem;
+}
+ .container .inputs{
+    margin-bottom:7rem;
+}
+
+.data{
+    border: none;
+    width: 40%;
+    height: 3rem;
+    background:transparent;
+    padding-left: 10px;
+    font-family:fantasy;
+    font-size: 1.2rem;
+    font-weight:200;
+    margin-left: -3rem;
+}
+.email:hover, .password:hover{
+    background: hsl(252, 30%, 95%) ;
+}
+.container > div .gender{
+    justify-content:start;
+    margin-left: 35%;
+}
+
+
+input::placeholder{
+    font-family:fantasy;
+    font-size: 1.2rem;
+}
+.data.select{
+    font-family: sans-serif;
+    font-size: 1.2rem;
+}
+.container .inputs label{
+    font-family: sans-serif;
+    width:18%;
+    font-size: 1.5rem;
+    text-align: left;
+}
+
+@media (max-width:990px){
+    .container{
+        width:100% ;
+        height: 100%;
+    }
+    .container > div{
+        width:100%;
+        height: 80%; 
+    }
+    .container > div .info{
+        justify-content: space-evenly;
+    }
+    html{
+    background:lightgrey;
+    }
+}
+
+@media (max-width:655px){
+    input::placeholder, .data.select, .data{
+        font-size: 1rem;
+    }
+     .container .inputs label, .submit{
+        font-size: 1.3rem;
+    }
+    h2{
+    font-size:1.2rem;
+    }
+   
+}
+@media (max-width:620px){
+    .container > div .info{
+        justify-content:center;
+    }
+    .container .inputs label{
+        width: 30%;
+        margin-right: 40px;
+    }
+    .data{
+        width: 45%;
+    }
+}
