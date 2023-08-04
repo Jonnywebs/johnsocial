@@ -1,0 +1,34 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+body{
+background:lightgrey;
+}
+h1{
+text-align:center;
+font-family:fantasy;
+}
+main{
+display:flex;
+flex-direction:column;
+margin: 2rem;
+display:grid;
+grid-template-columns: 1fr 1fr;
+gap: 1.5rem;
+}
+video{
+width:94%;
+height:9.9rem;
+margin:auto;
+background: lightgrey;
+}
+@media (max-width:800px){
+    main{
+        display: block;
+    }
+    video{
+        margin: 3%;
+    }
+}

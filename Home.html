@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Home</title>
+    <link rel="stylesheet" href="Home.css">
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <h2 class="log">
+                JohnSocial
+            </h2>
+            <div class="search-bar">
+                <i><img class="img" src=" Search.png" alt=""></i>
+                <input type="search" id="create-post" placeholder="Search for creators, inspirations and prospects">
+            </div>
+            <div class="create">
+                <label class="btn btn-primary" for="create-post">Create</label>
+                <div class="profile-photo"   >
+                    <img  src="Profile.png" alt=""  >
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="alert" id="alert">
+        <h1>Welcome <span id="user"></span>!</h1>
+            <div class="cancel"  id="cancel" onclick="myAlert()" >&#10006</div>
+    </div>
+            <div class="alert-background" id="alert-background" ></div>
+    <!--------------------------- MAIN ------------------>
+    <main>
+        
+        <div class="container" id="container">
+            <!------------------ LEFT --------------->
+            <div class="left">
+                <a class="profile">
+                    <div class="profile-photo">
+                        <img src=" Img4.jpg" alt="">
+                    </div>
+                    <div class="handle">
+                        <h4>Samuel John</h4>
+                        <p class="text-muted">
+                            @sammy
+                        </p>
+                    </div>
+                </a>
+                  
+              <div class="slide-out">
+                    <i class="slide"><</i>
+                     <i class="slide-2">></i>
+                  
+                <!---------------- SIDEBAR ---------------------->
+                <div class="sidebar">
+                    <a class="menu-item active" id="menu">
+                        <span><i><img class="img" src=" Home.png" alt=""></i></span>
+                        <h3>Home</h3>
+                    </a>
+                    <a href="Explore.html"  class="menu-item Explore-item">
+                            <span><i><img class="img" src=" Explore.png" alt=""></i></span>
+                            <h3>Explore</h3>
+                    </a>
+                    <a class="menu-item" id="notifications">
+                            <span><i><img class="img" src=" Notification.png" alt=""><small class="notification-count">7</small></i></span>
+                            <h3>Notifications</h3>
+                            <!--------------------------- NOTIFICATION POPUP  ---------------------->
+                            <div class="notifications-popup">
+                                <div>
+                                    <div class="profile-photo ">
+                                        <img src=" Img23.jpg" alt="">
+                                    </div>
+                                    <div class="notification-body">
+                                        <b>Keke Benjamin</b> accepted your friend request 
+                                        <small class="text-muted">2 DAYS AGO</small>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="profile-photo">
+                                        <img src=" Img3.jpg" alt="">
+                                    </div>
+                                    <div class="notification-body">
+                                        <b>John Doe</b> commented on your post 
+                                        <small class="text-muted">1 HOUR AGO</small>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="profile-photo">
+                                        <img src=" Img9.jpg" alt="">
+                                    </div>
+                                    <div class="notification-body">
+                                        <b>Samuel Jeremiah</b> and <b>374 others</b> liked your post 
+                                        <small class="text-muted">8 MINUTES AGO</small>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="profile-photo">
+                                        <img src=" Img6.jpg" alt="">
+                                    </div>
+                                    <div class="notification-body">
+                                        <b>Akinbola Oluwaferanmi</b> commented on your post you are tagged 
+                                        <small class="text-muted">2 DAYS AGO</small>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="profile-photo">
+                                        <img src=" Img12.jpg" alt="">
+                                    </div>
+                                    <div class="notification-body">
+                                        <b>Bro Emmanuel</b> accepted your friend request 
+                                        <small class="text-muted">43 MINUTES AGO</small>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="profile-photo">
+                                        <img src=" Img8.jpg" alt="">
+                                    </div>
+                                    <div class="notification-body">
+                                        <b>Sammy Joy</b> commented on your post you are tagged 
+                                        <small class="text-muted">6 HOURS AGO</small>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="profile-photo">
+                                        <img src=" Img50.jpg" alt="">
+                                    </div>
+                                    <div class="notification-body">
+                                        <b>Daddy David</b> liked your post 
+                                        <small class="text-muted">1 DAY AGO</small>
+                                    </div>
+                                </div>
+                            </div>
+                    </a>
+                    <a class="menu-item message-item" href="#messaged"  id="messages-notification">
+                            <span><i><img class="img" src=" Message.png" alt=""><small class="notification-count">12</small></i></span>
+                            <h3>Message</h3>
+                    </a>
+                    <a href="About.html"  class="menu-item about-item" >
+                            <span><i><img class="img" src=" About.png" alt=""></i></span>
+                            <h3>About</h3>
+                    </a>
+                    <a href="#friend-request" class="menu-item Request-item" id="messages-request" >
+                            <span><i><img class="img" src=" Request.png" alt="" ><small class="notification-count">6</small></i></span>
+                          <h3>Requests</h3>
+                    </a>
+                    <a class="menu-item" id="theme">
+                            <span><i><img class="img" src=" Theme.png" alt=""></i></span>
+                            <h3>Themes</h3>
+                    </a>
+                    <a href="Settings.html" class="menu-item Settings-item">
+                            <span><i><img class="img" src=" Settings.png" alt=""></i></span>
+                            <h3>Settings</h3>
+                    </a>
+                </div>
+            </div>
+                <!----------------------------- END OF SIDE BAR ------------->
+                <label for="create-post" class="btn btn-primary">Create Post</label>
+            </div>
+                <!----------------------------- END OF LEFT ------------->
+            <!------------------ MIDDLE --------------->
+            <div class="middle">
+                                <!----------------------------- STORIES ------------->
+                                <div class="stories">
+                                    <div class="story">
+                                        <div class="profile-photo"  >
+                                            <img src=" Img11.jpg" alt="">
+                                        </div>
+                                        <p class="name">Your Story</p>
+                                    </div>
+                                    <div class="story">
+                                        <div class="profile-photo">
+                                            <img src=" Img7.jpg" alt="">
+                                        </div>
+                                        <p class="name">Daniel Bale</p>
+                                    </div>
+                                    <div class="story">
+                                        <div class="profile-photo">
+                                            <img src=" Img14.jpg" alt="">
+                                        </div>
+                                        <p class="name">George Okoli</p>
+                                    </div>
+                                    <div class="story">
+                                        <div class="profile-photo">
+                                            <img src=" Img1.jpg" alt="">
+                                        </div>
+                                        <p class="name">Tade Grace</p>
+                                    </div>
+                                    <div class="story">
+                                        <div class="profile-photo">
+                                            <img src=" Img16.jpg" alt="">
+                                        </div>
+                                        <p class="name">Janet Stella</p>
+                                    </div>
+                                    <div class="story">
+                                        <div class="profile-photo">
+                                            <img src=" Img17.jpg" alt="">
+                                        </div>
+                                        <p class="name">Ahmed Precious</p>
+                                    </div>
+                                    
+                                </div>
+                                <!------------------- END OF STORIES -------------------->
+                                <form class="create-post" onsubmit="return(mySubmit(event))">
+                                    <div class="profile-photo">
+                                        <img src=" Profile.png" alt="">
+                                    </div>
+                                    <input type="text"   placeholder="What's on your mind, John?" required = "required" class="create-posts" id="create-post">
+                                    <input type="submit" value="Post" class="btn btn-primary post">
+                                </form>
+                                <div class="posted">
+                                   <div class="post-div">
+                                       <i class="icon">&#10006</i>
+                                        <div class="reveal-post">Your Post has been submitted</div> 
+                                    </div>
+                                </div>
+                                <!------------------ FEEDS ------------------->
+                                <div class="feeds">
+                                    <!-------------------------- FEED 1 -------------------->
+                                    <div class="feed">
+                                        <div class="head">
+                                            <div class="user">
+                                                <div class="profile-photo"  >
+                                                    <img src=" Img44.jpg" alt="">
+                                                </div>
+                                                <div class="ingo">
+                                                    <h3>Fawole Oludotun</h3>
+                                                    <small>Dubai, 15 MINUTES AGO</small>
+                                                </div>
+                                            </div>
+                                            <span class="edit">
+                                                    <i class="ellipsis">...</i>
+                                            </span>
+                                        </div>
+                                        <div class="photo">
+                                            <img src=" Img26.jpg" alt=""  >
+                                        </div>
+                                        <div class="action-buttons">
+                                            <div class="interaction-buttons">
+                                                <span><i><img class="img" src=" Bookmark.png" alt=""></i></span>
+                                                <span><i><img class="img" src=" Bookmark.png" alt=""></i></span>
+                                                <span><i><img class="img" src=" Bookmark.png" alt=""></i></span>
+                                            </div>
+                                            <div class="bookmark">
+                                                <span><i><img class="img" src=" Bookmark.png" alt=""></i></span>
+                                            </div>
+                                        </div>
+                                        <div class="liked-by">
+                                            <span><img src=" Img3.jpg" alt=""></span>
+                                            <span><img src=" Img4.jpg" alt=""></span>
+                                            <span><img src=" Img6.jpg" alt=""></span>
+                                            <p>Liked by <b>Segun Mayor</b> and <b>1,346 others</b></p>
+                                        </div>
+
+                                        <div class="caption">
+                                            <p> <b>Fawole Oludotun </b>  is one of your fans. <span class="harsh-tag">#lifestyle</span></p>
+                                        </div>
+                                        <div class="text-muted">View all 277 comments</div>
+                                    </div>
+                                    <!------------------------ END OF FEED -------------------------> 
+                                    <!-------------------------- FEED 2 -------------------->
+                                    <div class="feed">
+                                            <div class="head">
+                                                <div class="user">
+                                                    <div class="profile-photo">
+                                                        <img src=" Img65.jpg" alt="" id="photo" >
+                                                    </div>
+                                                    <div class="ingo">
+                                                        <h3>Alo Soji</h3>
+                                                        <small>Lagos, 30 MINUTES AGO</small>
+                                                    </div>
+                                                </div>
+                                                <span class="edit">
+                                                        <i class="ellipsis">...</i>
+                                                </span>
+                                            </div>
+                                            <div class="photo">
+                                                <img src=" Img64.jpg" alt="">
+                                            </div>
+                                            <div class="action-buttons">
+                                                <div class="interaction-buttons">
+                                                    <span><i><img class="img" src=" Bookmark.png" alt=""></i></span>
+                                                    <span><i><img class="img" src=" Bookmark.png" alt=""></i></span>
+                                                    <span><i><img class="img" src=" Bookmark.png" alt=""></i></span>
+                                                </div>
+                                                <div class="bookmark">
+                                                    <span><i><img class="img" src=" Bookmark.png" alt=""></i></span>
+                                                </div>
+                                            </div>
+                                            <div class="liked-by">
+                                                <span><img src=" Img8.jpg" alt=""></span>
+                                                <span><img src=" Img32.jpg" alt=""></span>
+                                                <span><img src=" Img26.jpg" alt=""></span>
+                                                <p>Liked by <b>Oyekola Blessing</b> and <b>854 others</b></p>
+                                            </div>
+    
+                                            <div class="caption">
+                                                <p> <b>Alo Soji </b>  is one of your fans. <span class="harsh-tag">#lifestyle</span></p>
+                                            </div>
+                                            <div class="text-muted">View all 126 comments</div>
+                                        </div>
+                                        <!------------------------ END OF FEED ------------------------->
+                                         <!-------------------------- FEED 3 -------------------->
+                                    <div class="feed">
+                                            <div class="head">
+                                                <div class="user">
+                                                    <div class="profile-photo">
+                                                        <img src=" Img63.jpg" alt="">
+                                                    </div>
+                                                    <div class="ingo">
+                                                        <h3>Kasali Mansur</h3>
+                                                        <small>USA, 43 MINUTES AGO</small>
+                                                    </div>
+                                                </div>
+                                                <span class="edit">
+                                                        <i class="ellipsis">...</i>
+                                                </span>
+                                            </div>
+                                            <div class="photo">
+                                                <img src=" Img62.jpg" alt="">
+                                            </div>
+                                            <div class="action-buttons">
+                                                <div class="interaction-buttons">
+                                                    <span><i><img class="img" src=" Bookmark.png" alt=""></i></span>
+                                                    <span><i><img class="img" src=" Bookmark.png" alt=""></i></span>
+                                                    <span><i><img class="img" src=" Bookmark.png" alt=""></i></span>
+                                                </div>
+                                                <div class="bookmark">
+                                                    <span><i><img class="img" src=" Bookmark.png" alt=""></i></span>
+                                                </div>
+                                            </div>
+                                            <div class="liked-by">
+                                                <span><img src=" Img32.jpg" alt=""></span>
+                                                <span><img src=" Img40.jpg" alt=""></span>
+                                                <span><img src=" Img16.jpg" alt=""></span>
+                                                <p>Liked by <b>Abraham Joseph</b> and <b>2,523 others</b></p>
+                                            </div>
+    
+                                            <div class="caption">
+                                                <p> <b>Kasali Mansur </b>  is one of your fans. <span class="harsh-tag">#lifestyle</span></p>
+                                            </div>
+                                            <div class="text-muted">View all 437 comments</div>
+                                        </div>
+                                        <!------------------------ END OF FEED ------------------------->
+                                         <!-------------------------- FEED 4 -------------------->
+                                    <div class="feed">
+                                            <div class="head">
+                                                <div class="user">
+                                                    <div class="profile-photo">
+                                                        <img src=" Img61.jpg" alt="">
+                                                    </div>
+                                                    <div class="ingo">
+                                                        <h3>Taiwo Joseph</h3>
+                                                        <small>Delta, 1 HOUR AGO</small>
+                                                    </div>
+                                                </div>
+                                                <span class="edit">
+                                                        <i class="ellipsis">...</i>
+                                                </span>
+                                            </div>
+                                            <div class="photo">
+                                                <img src=" Img60.jpg" alt="">
+                                            </div>
+                                            <div class="action-buttons">
+                                                <div class="interaction-buttons">
+                                                    <span><i><img class="img" src=" Bookmark.png" alt=""></i></span>
+                                                    <span><i><img class="img" src=" Bookmark.png" alt=""></i></span>
+                                                    <span><i><img class="img" src=" Bookmark.png" alt=""></i></span>
+                                                </div>
+                                                <div class="bookmark">
+                                                    <span><i><img class="img" src=" Bookmark.png" alt=""></i></span>
+                                                </div>
+                                            </div>
+                                            <div class="liked-by">
+                                                <span><img src=" Img24.jpg" alt=""></span>
+                                                <span><img src=" Img9.jpg" alt=""></span>
+                                                <span><img src=" Img17.jpg" alt=""></span>
+                                                <p>Liked by <b>J Prod</b> and <b>1,781 others</b></p>
+                                            </div>
+    
+                                            <div class="caption">
+                                                <p> <b>Taiwo Joseph </b>  is one of your fans. <span class="harsh-tag">#lifestyle</span></p>
+                                            </div>
+                                            <div class="text-muted">View all 97 comments</div>
+                                        </div>
+                                        <!------------------------ END OF FEED ------------------------->
+
+                                        <!-------------------------- FEED 5 -------------------->
+                                    <div class="feed">
+                                            <div class="head">
+                                                <div class="user">
+                                                    <div class="profile-photo">
+                                                        <img src=" Img13.jpg" alt="">
+                                                    </div>
+                                                    <div class="ingo">
+                                                        <h3>Owoade Dayo</h3>
+                                                        <small>United Kingdom, 3 HOURS AGO</small>
+                                                    </div>
+                                                </div>
+                                                <span class="edit">
+                                                        <i class="ellipsis">...</i>
+                                                </span>
+                                            </div>
+                                            <div class="photo">
+                                                <img src=" Img43.jpg" alt="">
+                                            </div>
+                                            <div class="action-buttons">
+                                                <div class="interaction-buttons">
+                                                    <span><i><img class="img" src=" Bookmark.png" alt=""></i></span>
+                                                    <span><i><img class="img" src=" Bookmark.png" alt=""></i></span>
+                                                    <span><i><img class="img" src=" Bookmark.png" alt=""></i></span>
+                                                </div>
+                                                <div class="bookmark">
+                                                    <span><i><img class="img" src=" Bookmark.png" alt=""></i></span>
+                                                </div>
+                                            </div>
+                                            <div class="liked-by">
+                                                <span><img src=" Img16.jpg" alt=""></span>
+                                                <span><img src=" Img12.jpg" alt=""></span>
+                                                <span><img src=" Img11.jpg" alt=""></span>
+                                                <p>Liked by <b>Tomiwa Ayoade</b> and <b>56 others</b></p>
+                                            </div>
+                                                                                                    
+                                            <div class="caption">
+                                                <p> <b>Owoade Dayo </b>  is one of your fans. <span class="harsh-tag">#lifestyle</span></p>
+                                            </div>
+                                            <div class="text-muted">View all 35 comments</div>
+                                        </div>
+                                        <!------------------------ END OF FEED ------------------------->
+
+                                        <!-------------------------- FEED 6 -------------------->
+                                    <div class="feed">
+                                            <div class="head">
+                                                <div class="user">
+                                                    <div class="profile-photo">
+                                                        <img src=" Img33.jpg" alt="">
+                                                    </div>
+                                                    <div class="ingo">
+                                                        <h3>Adefemi Emmanuel</h3>
+                                                        <small>Akure, 13 HOURS AGO</small>
+                                                    </div>
+                                                </div>
+                                                <span class="edit">
+                                                        <i class="ellipsis">...</i>
+                                                </span>
+                                            </div>
+                                            <div class="photo">
+                                                <img src=" Img58.jpg" alt="">
+                                            </div>
+                                            <div class="action-buttons">
+                                                <div class="interaction-buttons">
+                                                    <span><i><img class="img" src=" Bookmark.png" alt=""></i></span>
+                                                    <span><i><img class="img" src=" Bookmark.png" alt=""></i></span>
+                                                    <span><i><img class="img" src=" Bookmark.png" alt=""></i></span>
+                                                </div>
+                                                <div class="bookmark">
+                                                    <span><i><img class="img" src=" Bookmark.png" alt=""></i></span>
+                                                </div>
+                                            </div>
+                                            <div class="liked-by">
+                                                <span><img src=" Img25.jpg" alt=""></span>
+                                                <span><img src=" Img24.jpg" alt=""></span>
+                                                <span><img src=" Img36.jpg" alt=""></span>
+                                                <p>Liked by <b>Temiloluwa</b> and <b>2,746 others</b></p>
+                                            </div>
+    
+                                            <div class="caption">
+                                                <p> <b>Adefemi Emmanuel</b>  is one of your fans. <span class="harsh-tag">#lifestyle</span></p>
+                                            </div>
+                                            <div class="text-muted">View all 478 comments</div>
+                                        </div>
+                                        <!------------------------ END OF FEED ------------------------->
+
+                                        <!-------------------------- FEED 7 -------------------->
+                                    <div class="feed">
+                                            <div class="head">
+                                                <div class="user">
+                                                    <div class="profile-photo">
+                                                        <img src=" Img35.jpg" alt="">
+                                                    </div>
+                                                    <div class="ingo">
+                                                        <h3>Idowu Mary</h3>
+                                                        <small>Ekiti, 1 DAY AGO</small>
+                                                    </div>
+                                                </div>
+                                                <span class="edit">
+                                                        <i class="ellipsis">...</i>
+                                                </span>
+                                            </div>
+                                            <div class="photo">
+                                                <img src=" Img59.jpg" alt="">
+                                            </div>
+                                            <div class="action-buttons">
+                                                <div class="interaction-buttons">
+                                                    <span><i><img class="img" src=" Bookmark.png" alt=""></i></span>
+                                                    <span><i><img class="img" src=" Bookmark.png" alt=""></i></span>
+                                                    <span><i><img class="img" src=" Bookmark.png" alt=""></i></span>
+                                                </div>
+                                                <div class="bookmark">
+                                                    <span><i><img class="img" src=" Bookmark.png" alt=""></i></span>
+                                                </div>
+                                            </div>
+                                            <div class="liked-by">
+                                                <span><img src=" Img22.jpg" alt=""></span>
+                                                <span><img src=" Img11.jpg" alt=""></span>
+                                                <span><img src=" Img33.jpg" alt=""></span>
+                                                <p>Liked by <b>Akinbola Surprise </b> and <b> 2,568 others</b></p>
+                                            </div>
+    
+                                            <div class="caption">
+                                                <p> <b>Idowu Mary </b>  is one of your fans. <span class="harsh-tag">#lifestyle</span></p>
+                                            </div>
+                                            <div class="text-muted">View all 537 comments</div>
+                                        </div>
+                                        <!------------------------ END OF FEED ------------------------->
+                                        
+                                </div>
+                                <!------------------------ END OF FEEDS ------------------------->
+            </div>
+            <!------------------------ END OF MIDDLE ------------------------->
+
+
+            <!------------------ RIGHT --------------->
+            <div class="right">
+                <div class="messages" id="messaged"  >
+                    <div class="heading">
+                        <h4>Messages</h4><i><img class="img" src=" Notes.png" alt=""></i>
+                    </div>
+                    <!------------------------------ SEARCH BAR ---------------->
+                    <div class="search-bar">
+                        <i><img class="img" src=" Search.png" alt=""></i>
+                        <input type="search" placeholder="Search messages" id="message-search">
+                    </div>
+                    <!------------------------ MESSAGE CATEGORY ------------------------->
+                    <div class="category">
+                        <h6 class="active">Primary</h6>
+                        <h6>General</h6>
+                       <a href="#friend-request"><h6 class="message-requests request-category"  >Requests<span>(6)</span></h6></a> 
+                    </div>
+                    <!------------------------ MESSAGE ------------------------->
+                    <div class="message">
+                        <div class="profile-photo">
+                            <img src=" Img41.jpg" alt="">
+                        </div>
+                        <div class="message-body">
+                            <h5>Edem Quist</h5>
+                            <p class="text-muted">I will soon get going bro</p>
+                        </div>
+                    </div>
+                    <!------------------------ MESSAGE ------------------------->
+                    <div class="message">
+                            <div class="profile-photo">
+                                <img src=" Img54.jpg" alt="">
+                                <div class="active"></div>
+                            </div>
+                            <div class="message-body">
+                                <h5>Dad</h5>
+                                <p class="text-muted">I will be coming home tommorow sir</p>
+                            </div>
+                        </div>
+                        <!------------------------ MESSAGE ------------------------->
+                    <div class="message">
+                            <div class="profile-photo">
+                                <img src=" Img42.jpg" alt="">
+                            </div>
+                            <div class="message-body">
+                                <h5>Bestie</h5>
+                                <p class="text-bold">OK</p>
+                            </div>
+                        </div>
+                    <!------------------------ MESSAGE ------------------------->
+                    <div class="message">
+                        <div class="profile-photo">
+                            <img src=" Img6.jpg" alt="">
+                        </div>
+                        <div class="message-body">
+                            <h5>Daniella Jacobs</h5>
+                            <p class="text-bold">2 new messages</p>
+                        </div>
+                    </div>
+                    <!------------------------ MESSAGE ------------------------->
+                    <div class="message">
+                        <div class="profile-photo">
+                            <img src=" Img45.jpg" alt="">
+                        </div>
+                        <div class="message-body">
+                            <h5>Ayeni Esther</h5>
+                            <p class="text-muted">You're really funny</p>
+                        </div>
+                    </div>
+                    <!------------------------ MESSAGE ------------------------->
+                    <div class="message">
+                        <div class="profile-photo">
+                            <img src=" Img52.jpg" alt="">
+                            <div class="active"></div>
+                        </div>
+                        <div class="message-body">
+                            <h5>Pastor Adeola</h5>
+                            <p class="text-bold">Happy Birthday Sir</p>
+                        </div>
+                    </div>
+                    <!------------------------ MESSAGE ------------------------->
+                    <div class="message">
+                    <div class="profile-photo">
+                    <img src=" Img46.jpg" alt="">
+                    </div>
+                    <div class="message-body">
+                    <h5>Ayeni Eunice</h5>
+                    <p class="text-muted">You're really funny</p>
+                    </div>
+                    </div>
+                    <!------------------------ MESSAGE ------------------------->
+                    <div class="message">
+                    <div class="profile-photo">
+                    <img src=" Img25.jpg" alt="">
+                    </div>
+                    <div class="message-body">
+                    <h5>Owolabi Paul</h5>
+                    <p class="text-muted">You didn't come to church today. Hope nothing is the problem.</p>
+                    </div>
+                    </div>
+                    <!------------------------ MESSAGE ------------------------->
+                    <div class="message">
+                    <div class="profile-photo">
+                    <img src=" Img53.jpg" alt="">
+                    </div>
+                    <div class="message-body">
+                    <h5>Fawole Damilola</h5>
+                    <p class="text-muted">How was your results. I hope they were good!?</p>
+                    </div>
+                    </div>
+                    <!------------------------ MESSAGE ------------------------->
+                    <div class="message">
+                    <div class="profile-photo">
+                    <img src=" Img6.jpg" alt="">
+                    <div class="active"></div>
+                    </div>
+                    <div class="message-body">
+                    <h5>Akinbola Feranmi</h5>
+                    <p class="text-bold">Good Night bro. See you tommorrow</p>
+                    </div>
+                    </div>
+                    <!------------------------ MESSAGE ------------------------->
+                    <div class="message">
+                    <div class="profile-photo">
+                    <img src=" Img15.jpg" alt="">
+                    </div>
+                    <div class="message-body">
+                    <h5>Abraham Joseph</h5>
+                    <p class="text-muted">He said I should come to his office today.</p>
+                    </div>
+                    </div>
+                    <!------------------------ MESSAGE ------------------------->
+                    <div class="message">
+                    <div class="profile-photo">
+                    <img src=" Img5.jpg" alt="">
+                    </div>
+                    <div class="message-body">
+                    <h5>Keyboard Teacher</h5>
+                    <p class="text-muted">Yes, I was able to play at church today.</p>
+                    </div>
+                    </div>
+                </div>
+                 <!------------------------ END OF MESSAGE ------------------------->
+
+                 <!------------------------ FRIEND REQUESTS ------------------------->
+                 <div class="friend-requests" id="friend-request">
+                     <h4>Requests</h4>
+                     <div class="request one">
+                         <div class="info">
+                             <div class="profile-photo">
+                                 <img src=" Img59.jpg" alt="">
+                             </div>
+                             <div>
+                                 <h5>Adedoja John</h5>
+                                 <p class="text-muted">
+                                     8 mutual friends
+                                 </p>
+                             </div>
+                         </div>
+                         <div class="action">
+                            <button class="btn btn-primary requests-1" >
+                                Accept
+                            </button>
+                            <button class="btn requests-1 requests-reject-1"  >
+                                Decline
+                           </button>
+                        </div>
+                     </div>
+
+                     <div class="request two">
+                        <div class="info">
+                            <div class="profile-photo">
+                                <img src=" Img47.jpg" alt="">
+                            </div>
+                            <div>
+                                <h5>Martins Garry</h5>
+                                <p class="text-muted">
+                                    3 mutual friends
+                                </p>
+                            </div>
+                        </div>
+                        <div class="action">
+                           <button class="btn btn-primary requests-2">
+                               Accept
+                           </button>
+                           <button class="btn requests-2 requests-reject-2">
+                               Decline
+                          </button>
+                       </div>
+                    </div>
+
+                    <div class="request three">
+                        <div class="info">
+                            <div class="profile-photo">
+                                <img src=" Img49.jpg" alt="">
+                            </div>
+                            <div>
+                                <h5>Segun Ogunkoya</h5>
+                                <p class="text-muted">
+                                    12 mutual friends
+                                </p>
+                            </div>
+                        </div>
+                        <div class="action">
+                           <button class="btn btn-primary requests-3">
+                               Accept
+                           </button>
+                           <button class="btn requests-3 requests-reject-3">
+                               Decline
+                          </button>
+                       </div>
+                       
+                    </div>
+                    <div class="request four">
+                    <div class="info">
+                    <div class="profile-photo">
+                    <img src=" Img54.jpg" alt="">
+                    </div>
+                    <div>
+                    <h5>Princess Joyce</h5>
+                    <p class="text-muted">
+                    12 mutual friends
+                    </p>
+                    </div>
+                    </div>
+                    <div class="action">
+                    <button class="btn btn-primary requests-4" >
+                    Accept
+                    </button>
+                    <button class="btn requests-4 requests-reject-4"  >
+                    Decline
+                    </button>
+                    </div>
+                    </div>
+                    <div class="request five">
+                        <div class="info">
+                             <div class="profile-photo">
+                                <img src=" Img57.jpg" alt="">
+                             </div>
+                        <div>
+                    <h5>Joan Bling</h5>
+                    <p class="text-muted">
+                    6 mutual friends
+                    </p>
+                    </div>
+                    </div>
+                    <div class="action">
+                    <button class="btn btn-primary requests-5" >
+                    Accept
+                    </button>
+                    <button class="btn requests-5 requests-reject-5"  >
+                    Decline
+                    </button>
+                    </div>
+                    </div>
+                    
+                    <div class="request six">
+                    	<div class="info">
+                    		<div class="profile-photo">
+                    			<img src=" Img32.jpg" alt="">
+                    		</div>
+                    		<div>
+                    			<h5>Esele Micheal</h5>
+                    			<p class="text-muted">
+                    				3 mutual friends
+                   	 			</p>
+                    		</div>
+                    	</div>
+                    	<div class="action">
+                    		<button class="btn btn-primary requests-6" >
+                   			 Accept
+                    		</button>
+                    		<button class="btn requests-6 requests-reject-6"  >
+                    			Decline
+                    		</button>
+                    	</div>
+                    </div>
+                    
+                    
+                 </div>
+               
+            </div>
+            <!--============================== END OF RIGHT  =======================-->
+        </div>
+    </main>
+    <!--=================================== THEME CUSTOMIZATION ===============-->
+    <div class="customize-theme" id="customize-theme">
+        <div class="card">
+            <h2>Customize your view</h2>
+            <p class="text-muted">Manage your font size, color, and background.</p>
+
+            <!------------------------- FONT SIZES -------------------->
+            <div class="font-size">
+                <h4>Font Size</h4>
+                <div>
+                <h6>Aa</h6>
+                <div class="choose-size">
+                    <span class="font-size-1"></span>
+                    <span class="font-size-2 active"></span>
+                    <span class="font-size-3"></span>
+                    <span class="font-size-4"></span>
+                    <span class="font-size-5"></span>
+                </div>
+                <h3>Aa</h3>
+                </div>
+            </div>
+           
+
+
+        <!--------------------------- PRIMARY COLORS  ------------------->
+        <div class="color">
+            <h4>Color</h4>
+            <div class="choose-color">
+               <span class="color-1 active"></span>
+               <span class="color-2"></span>
+               <span class="color-3"></span>
+               <span class="color-4"></span>
+               <span class="color-5"></span>
+            </div>
+        </div>
+
+        <!--------------------------------------- BACKGROUND COLORS --------------------->
+        <div class="background">
+            <h4>Background</h4>
+            <div class="choose-bg">
+                <div class="bg-1 active">
+                    <span class="active"></span>
+                    <h5 for="bg-1">Light</h5>
+                </div>
+                <div class="bg-2">
+                    <span ></span>
+                    <h5>Dim</h5>
+                </div>
+                <div class="bg-3">
+                    <span></span>
+                    <h5 for="bg-3">Lights Out</h5>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="Home.js"></script>
+</body>
+</html>
