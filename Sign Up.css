@@ -1,0 +1,202 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+html{
+    background: hsl(252, 30%, 95%);
+}
+
+main{
+    width: 100%;
+    height:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main .container{
+    width: 92%;
+    height: 92vh;
+    background: lightgrey;
+    display: flex;
+    justify-content: center;
+    flex-direction:column;
+    align-items: center;
+    border-radius: 1rem;
+    margin-top: 9rem;
+    padding-top:0rem;
+    overflow: scroll;
+}
+
+.alert{
+    background-color:rgb(149, 125, 245);
+    width:30%;
+    height:150px;
+    position:fixed;
+    top:100px;
+    border-radius:5px;
+    margin-left:35%;
+    transition:0.8s;
+    z-index: 155;
+    display:none;
+    justify-content: center;
+    align-items: center;
+    text-align:center;
+    }
+    .alert h1{
+        font-size: 1.5rem;
+        color:hsl(252, 30%, 95%);
+        padding:0 1rem;
+    }
+h1{
+  text-align:center;
+  font-family: Tahoma;
+  font-size: 3rem;
+  font-weight: 700;
+}
+header{
+width:100%;
+background:grey;
+position:fixed;
+top:0;
+z-index:2;
+}
+main .container >div{
+    width: 90%;
+    height:70%;
+    margin: auto;
+    margin-top:0;
+}
+main .container > div .info{
+    width: 100%;
+    margin:5rem auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.data{
+    border: none;
+    width: 50%;
+    height: 3rem;
+    background: #f4f4f4 ;
+    padding-left: 10px;
+    font-family:fantasy;
+    font-size: 1.2rem;
+    font-weight:200;
+}
+.password-show{
+    padding-left:0;
+    display: flex;
+    align-items: center;
+    background:transparent;
+    position:relative;
+}
+.password-show input{
+    width:100%;
+    height: 100%;
+    padding-left: 10px;
+    border: none;
+}
+input:hover, .data.select:hover{
+    background: hsl(252, 30%, 95%) ;
+}
+main .container > div .gender{
+    justify-content:start;
+    margin-left: 35%;
+}
+.img{
+    width: 23px;
+    height: 23px;
+    display: inline-block;
+    cursor:pointer;
+    position:absolute;
+    right:0;
+    top:11.5px;
+    }
+    .img1{
+    width:27px;
+    height: 40px;
+    display:none;
+    cursor:pointer;
+    position:absolute;
+    right:0;
+    top:4px;
+    }
+
+input::placeholder{
+    font-family:fantasy;
+    font-size: 1.2rem;
+}
+.data.select{
+    font-family: sans-serif;
+    font-size: 1.2rem;
+    font-weight:300;
+}
+main .container .inputs label{
+    font-family: sans-serif;
+    width:18%;
+    font-size: 1.5rem;
+    text-align: left;
+}
+.submit{
+    border-radius: 2rem;
+    width: 53%;
+    padding: 1rem 24px;
+    background: hsl(252, 75%, 60%);
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 1.5rem;
+    color: #fff;
+    cursor: pointer;
+    transition:0.3s;
+    border:none;
+    margin-bottom: 3rem;
+}
+.submit:hover{
+background:#fff;
+color:hsl(252, 75%, 60%);
+}
+@media (max-width:990px){
+    main .container{
+        width:100% ;
+        height: 100%;
+    }
+    main .container > div{
+        width:100%;
+        height: 80%; 
+        margin-top:-5rem;
+    }
+    main .container > div .info{
+        justify-content: space-evenly;
+    }
+    html{
+    background:lightgrey;
+    }
+}
+
+@media (max-width:655px){
+    input::placeholder, .data.select, .data{
+        font-size: 1rem;
+    }
+    main .container .inputs label, .submit{
+        font-size: 1.3rem;
+    }
+    h1{
+    font-size:2rem;
+    }
+   
+}
+@media (max-width:620px){
+    main .container > div .info{
+        justify-content:center;
+    }
+    main .container .inputs label{
+        width: 30%;
+        margin-right: 40px;
+    }
+    .data{
+        width: 45%;
+    }
+}

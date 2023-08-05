@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Settings</title>
+    <link rel="stylesheet" href="Settings.css">
+</head>
+<body>
+    <header>
+        <h1>Account</h1>
+        <p>Update your info to keep your account secure</p>
+    </header>
+    <div class="alert-background" id="alert-background" >
+    <div class="alert" id="alert">
+    <h1>Wrong Password!</h1>
+    <a class="cancel"  id="cancel" onclick="myAlert()" >&#10006</a>
+    </div>
+    </div>
+    <div class="alert-background1" id="alert-background1" >
+    <div class="alert1" id="alert1">
+    <h1>Password do not match!</h1>
+    <a  class="cancel1"  id="cancel1" onclick="firstAlert()" >&#10006</a>
+    </div>
+    </div>
+    
+    <div class="alert-background2" id="alert-background2" >
+    <div class="alert2" id="alert2">
+    <h1>Password Changed!</h1>
+    <a href=""  class="cancel2"  id="cancel2" onclick="secondAlert()" >&#10006</a>
+    </div>
+    </div>
+    
+<main>
+    <div>
+        <a href="Account Info.html">=> Personal and account information</a>
+    </div>
+    <div class="password-security">
+            <a href="#" >=> Password and Security</a>
+    </div>
+    <form action="#" class="password-form" onsubmit="return(passwordChange())">
+        <div class="info">
+            <label for="password">Enter Password</label>
+            <div class="password-input password-show">
+                <input type="password" name="password" id="password" class="password-text password" placeholder="Enter Password" required>
+                <i><img class="img" id="icon"  onclick="myIcon1()" src=" Eye.png"></i>
+                <i><img class="imgs" id="icon"  onclick="myIcons1()" src=" Crossed eye.png"></i>
+            </div>
+        </div>
+        <div class="info">
+            <label for="newpassword">New Password</label>
+            <div class="password-input password-show">
+                <input type="password" name="newpassword" id="new" class="password-text new-password" placeholder="Enter New Password" required>
+                <i><img class="img1" id="icon"  onclick="myIcon2()" src=" Eye.png"></i>
+                <i><img class="imgs1" id="icon"  onclick="myIcons2()" src=" Crossed eye.png"></i>
+            </div>
+        </div>
+        <div class="info">
+            <label for="confirmpassword">Confirm Password</label>
+            <div class="password-input password-show">
+                <input type="password" name="confirmpassword" id="confirm" class="password-text confirm-password" placeholder="Confirm Password" required>
+                <i><img class="img2" id="icon"  onclick="myIcon3()" src=" Eye.png"></i>
+                <i><img class="imgs2" id="icon"  onclick="myIcons3()" src=" Crossed eye.png"></i>
+            </div>
+        </div>
+        <input type="submit" class="submit" value="Change">
+    </form>
+
+    <div class="blocked-contact" onclick="blockedTeam()">
+        <a href="#">=> Blocked Contact <span class="number">(3) </span> </a>
+    </div>
+    <div class="blocked">
+    
+    <div class="info first">
+    <label>Akinsanya Esther</label>
+    <button class="unblock1" >Unblock</button>
+    </div>
+    <div class="info second">
+    <label>James Jethro</label>
+    <button class="unblock2" >Unblock</button>
+    </div>
+    <div class="info third">
+    <label>Eniola Esther</label>
+    <button class="unblock3" >Unblock</button>
+    </div>
+    </div>
+    <div class="password-security">
+            <a href="Index.html" >=> Log Out</a>
+    </div>
+</main>
+<script src="Settings.js"></script>
+</body>
+</html>

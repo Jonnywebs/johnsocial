@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="Sign Up.css">
+</head>
+<body>
+<header>
+<h1>Create an Account</h1>
+</header>
+
+     
+     
+        <main>
+                <form action="Login.html" class="container" onsubmit="saveData()">
+                  <div class="inputs">
+                        <div class="info"><label for="firstname">First Name</label>  <input type="text" name="firstname" class="data" id="firstname" placeholder="First Name" required> </div>
+                        <div class="info"><label for="lastname">Last Name</label>  <input type="text" name="lastname" class="data" id="lastname" placeholder="Last Name" required> </div>
+                        <div class="info"><label for="phone">Phone</label>  <input type="text" name="phone" class="data" placeholder="Phone" id="phone" required> </div>
+                        <div class="info"><label for="gender">Gender</label> <select name="gender" id="gender" class="data select">
+                                <option value="space">none</option>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                            </select> </div>
+                        <div class="info"><label for="email">Email</label>  <input type="email" name="email" id="email" class="data" placeholder="example@gmail.com" required> </div>
+                        <div class="info">
+                          <label for="password">Password</label> 
+                          <div class="data password-show">
+                        <input type="password"  class=" password" id="password" name="password" placeholder="Password" required>
+                        <i><img class="img" id="icon"  onclick="myIcon()" src="Eye.png"></i>
+                        <i><img class="img1" id="icon"  onclick="myIcons()" src="Crossed eye.png"></i>
+                      </div>
+                         </div>
+                      <center> <input type="submit" class="submit" value="Log In" > </center>  
+                  </div>
+                 
+                </form>
+              </main>
+              <script src="Sign Up.js">
+              </script>
+</body>
+</html>

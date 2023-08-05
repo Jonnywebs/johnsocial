@@ -1,0 +1,257 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+html{
+    background:#f4f4f4;
+    width:100%;
+}
+header{
+    text-align: center;
+}
+header h1{
+    font-size: 3rem;
+}
+header p{
+    font-size: 1.5rem;
+}
+.alert, .alert1, .alert2{
+    background-color:rgb(149, 125, 245);
+    width:30%;
+    height:150px;
+    position:fixed;
+    top:100px;
+    border-radius:5px;
+    margin-left:35%;
+    transition:0.8s;
+    z-index: 155;
+    display:none;
+    justify-content: center;
+    align-items: center;
+    text-align:center;
+    }
+    .alert h1, .alert1 h1, .alert2 h1{
+        font-size: 1.5rem;
+        color:hsl(252, 30%, 95%);
+        padding:0 1rem;
+    }
+    .cancel, .cancel1, .cancel2{
+        font-size:20px;
+        display:none;
+        position:absolute;
+        top:0;
+        right:15px;
+        margin-left:92%;
+        cursor: pointer;
+        color:hsl(252, 74%, 51%);
+        }
+      .alert-background, .alert-background1, .alert-background2{
+        width:100%;
+        height:120vh;
+        background-color:rgba(0, 0, 0, 0.5);
+        position:fixed;
+        top:0;
+        display:none;
+        transition:1s;
+        z-index: 15;
+        place-items:center;
+        }
+main > div{
+    margin:3rem 0rem ;
+    width:100%;
+}
+main > div a{
+    font-size: 2rem;
+    color:rgba(0, 0, 0, 0.609) ;
+    padding-left:1rem;
+}
+.password-input{
+border: none;
+width: 50%;
+height:3rem;
+padding-left: 10px;
+font-size: 1rem;
+display:flex;
+align-items: center;
+margin-left:-2rem;
+position:relative;
+}
+
+.password-text{
+    width: 100%;
+    height: 100%;
+    margin:0;
+    border: none;
+    padding-left: 10px;
+    background: #f4f4f4 ;
+}
+input:hover{
+    background: rgba(211, 211, 211, 0.226);
+}
+.img, .img1, .img2{
+    width: 23px;
+    height: 23px;
+    display: inline-block;
+    cursor:pointer;
+    position:absolute;
+    right:0;
+    top:11.5px;
+    }
+   .imgs, .imgs1, .imgs2{
+   width: 27px;
+   height: 40px;
+   display:none;
+   cursor:pointer;
+   position:absolute;
+   right:0;
+   top:4px;
+   }
+form .info{
+    width: 95%;
+    margin:2rem;
+    margin-left: 1rem;
+    padding-top: 2rem;
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+}
+.info label{
+    font-family: sans-serif;
+    width:18%;
+    font-size: 1.2rem;
+}
+.block.active{
+    height:auto;
+    padding: 2rem 0;
+}
+.blocked{
+    font-family: sans-serif;
+    color:#222;
+    background:#fff;
+    height:0;
+    width:70%;
+    transition:1s;
+    overflow:hidden;
+    display:flex;
+    justify-content:space-around;
+    flex-direction:column;
+    gap:1rem;
+    margin-left:3rem;
+}
+.blocked.block{
+height:15rem;
+}
+.blocked .info{
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+.blocked .info label{
+font-size:1.1rem;
+margin-left: 1rem;
+width: 60%;
+}
+form{
+    width: 70%;
+    background: #fff;
+    margin-top:-2rem;
+    height:0;
+    overflow: hidden;
+    transition: 1s;
+    margin-left: 3rem;
+}
+form.display{
+    height:30rem;
+} 
+button{
+    background: hsl(252, 75%, 60%);
+    border: none;
+    margin-left: 2.5rem;
+    padding: 0.7rem 15px;
+    color: #fff;
+    border-radius: 1.7rem;
+    cursor: pointer;
+}
+.unblock1, .unblock2, .unblock3 {
+    margin-right: 1rem;
+}
+.submit{
+    border-radius: 2rem;
+    width: 30%;
+    padding: 1rem 24px;
+    background: hsl(252, 75%, 60%);
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 1.5rem;
+    color: #fff;
+    border:none;
+    cursor: pointer;
+    transition:0.3s;
+    margin-left: 30%;
+    margin-bottom: 2rem;
+}
+.submit:hover{
+background:#f4f4f4;
+color:hsl(252, 75%, 60%);
+}
+
+
+@media (max-width:700px){
+ 
+  main > div a{
+    font-size: 1rem;
+  }
+  header h1{
+  font-size: 2.2rem;
+  }
+  header p{
+  font-size: 1.2rem;
+  }
+  main > div{
+  margin-left:1rem;
+  }
+  .blocked{
+      width: 100%;
+      margin: 0;
+      margin-top:-2rem;
+  }
+	.alert, .alert1, .alert2{
+	width: 80%;
+	margin-left: 10%;
+	}
+  .password-text::placeholder{
+  font-size:0.7rem;
+  }
+  form{
+      width: 100%;
+      margin-left: 0;
+  }
+   form.display{
+   height:30rem;
+   }
+   .submit{
+   width:40%;
+   margin-left:30%;
+   }
+   input::placeholder, form .info{
+        font-size: 1rem;
+    }
+     .info label, .submit{
+        font-size: 1rem;
+    }
+    form .info{
+    justify-content:start;
+    margin-left:1rem;
+    }
+    .info label{
+    width: 50%;
+    font-size:0.7rem;
+    }
+    .submit{
+    margin-bottom:0.5rem;
+    }
+    }
