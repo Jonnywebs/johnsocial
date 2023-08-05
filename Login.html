@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login</title>
+    <link rel="stylesheet" href="Login.css">
+</head>
+<body>
+    <main>
+    <header>
+    <h1>Log In</h1>
+    </header>
+        <div class="alert-background" id="alert-background" >
+    <div class="alert" id="alert">
+    <h1>You don't have an account<br><a href="Sign Up.html" >Sign Up</a></h1>
+    <div class="cancel"  id="cancel" onclick="myAlert()" >&#10006</div>
+    </div>
+    </div>
+    
+        <div class="alert-background1" id="alert-background1" >
+    <div class="alert1" id="alert1">
+    <h1>Wrong Password</h1>
+    <div class="cancel1"  id="cancel1" onclick="firstAlert()" >&#10006</div>
+    </div>
+    </div>
+
+    
+      <form action="Home.html" class="container" onsubmit="return(loginSubmit())">
+        <div class="inputs">
+          <div class="info">
+            <label for="email" >Email</label>  <input type="email" name="email"   class="data email" id="email" placeholder="email@gmail.com" required>
+           </div>
+          <div class="info">
+          <label for="password">Password</label> 
+          <div class=" data password-show">
+          <input type="password" class=" password" id="password"  name="password" placeholder="Password" required>
+          <i><img class="img" id="icon"  onclick="myIcon()" src="Eye.png"></i>
+           <i><img class="img1" id="icon"  onclick="myIcons()" src="Crossed eye.png"></i>
+          </div>
+          </div>
+          </div>
+        <input type="submit" class="submit" id="form"  value="Log In">  
+      </form>
+    </main>
+    <script src="Login.js"></script>
+</body>
+</html>
