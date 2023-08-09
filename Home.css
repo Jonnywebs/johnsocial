@@ -827,18 +827,20 @@ border-radius: 50%;
     position:fixed;
     margin-left:1rem;
     overflow:scroll;
-    height:80vh;
-    width: 70%;
     margin-left:15%;
+    height:80vh;
     border-radius:var(--card-padding);
+    z-index:4;
+    background:red;
     }
     .right .messages .category{
     width:78%;
     }
     .right .messages{
     overflow: scroll;
+    height:80vh;
+    width: 70%;
     display:none;
-    z-index:3;
     }
     .middle .feed .photo{
         height: 70vh;
@@ -849,7 +851,13 @@ border-radius: 50%;
     }
     .right .friend-requests{
     display:none;
+    position:fixed;
+    top:6rem;
+    overflow: scroll;
+    height:80vh;
+    width:90%;
     background: var(--color-light);
+    border-radius:var(--card-padding);
     }
     .friend-requests h4{
         text-align: center  ;
@@ -888,7 +896,7 @@ border-radius: 50%;
         grid-column: 3/4;
         position: fixed;
         right: -3.6rem;
-        transition: 1s;
+        transition: 0.5s;
         overflow:scroll;
         top:20%;
     }
@@ -908,7 +916,7 @@ border-radius: 50%;
     width:80%;
     height:70vh;
     overflow: scroll;
-    z-index:2;
+    z-index:5;
     }
     .left .notifications-popup::before{
     position: absolute;
@@ -931,8 +939,6 @@ border-radius: 50%;
             padding:15px;
         }
         main .container .right{
-            height:70vh;
-            width: 88%;
             margin-left:2%;
             }
             main .container .left{
