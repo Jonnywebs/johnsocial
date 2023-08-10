@@ -49,18 +49,34 @@ main .container{
         color:hsl(252, 30%, 95%);
         padding:0 1rem;
     }
-h1{
-  text-align:center;
-  font-family: Tahoma;
-  font-size: 3rem;
-  font-weight: 700;
-}
+    .cancel{
+        font-size:20px;
+        display:none;
+        position:absolute;
+        top:0;
+        right:15px;
+        margin-left:92%;
+        cursor: pointer;
+        color: var(--color-secondary);
+        }
+        .alert-background{
+        width:100%;
+        height:100vh;
+        background-color:rgba(0, 0, 0, 0.5);
+        position:fixed;
+        top:0;
+        display:none;
+        transition:1s;
+        z-index: 15;
+        place-items:center;
+        }
 header{
 width:100%;
 background:grey;
 position:fixed;
 top:0;
 z-index:2;
+text-align:center;
 }
 main .container >div{
     width: 90%;
@@ -186,7 +202,10 @@ color:hsl(252, 75%, 60%);
     h1{
     font-size:2rem;
     }
-   
+   .alert{
+   width: 80%;
+   margin-left: 10%;
+   }
 }
 @media (max-width:620px){
     main .container > div .info{

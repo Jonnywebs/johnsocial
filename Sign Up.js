@@ -1,4 +1,5 @@
 function saveData() {
+                
                 const inputValue1 = document.getElementById('firstname').value;
                 localStorage.setItem('firstData', inputValue1);
 
@@ -17,10 +18,19 @@ function saveData() {
                 const inputValue6 = document.getElementById('password').value;
                 localStorage.setItem('sixthData', inputValue6);
                 
+                document.getElementById("cancel").style.display= "block";
+                document.getElementById("alert").style.display = "flex";
+                document.getElementById("alert-background").style.display = "flex";
                 
-                alert('Data Saved!');
+                
               } 
               
+              function myAlert(){
+              document.getElementById("cancel").style.display = "none";
+              document.getElementById("alert").style.display= "none";
+              document.getElementById("alert-background").style.display= "none";
+              
+              }
               
               function myIcon() {
               document.querySelector(".password").type = "text"
@@ -32,3 +42,5 @@ function saveData() {
               document.querySelector('.img').style.display = 'inline-block';
               document.querySelector('.img1').style.display = 'none'
               }
+              
+              
