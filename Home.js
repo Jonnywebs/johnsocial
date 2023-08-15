@@ -351,8 +351,7 @@ setTimeout( function(){
 
 
 // Function to handle changes based on max width
-function messagesResponsivity() {
-  const maxWidth = "900"; 
+  const maxWidth = 900; 
 
   if (window.innerWidth <= maxWidth) {
    menuItems.forEach(item => {
@@ -366,17 +365,8 @@ function messagesResponsivity() {
    
    }
    })
-   })
-  }
-}
-
-window.addEventListener('resize', messagesResponsivity);
-
-messagesResponsivity();
-
-function requestResponsivity() {
-  const maxWidth = 900; 
-  if (window.innerWidth <= maxWidth) {
+   });
+   
    menuItems.forEach(items => {
    items.addEventListener('click', () => {
    if(items.id != 'messages-request'){
@@ -388,11 +378,34 @@ function requestResponsivity() {
    
    }
    })
-   })
+   });
+   
+   let cover = document.querySelectorAll(".headers");
+   let head = document.querySelector(".feeds");
+   
+   cover.forEach(covers => {
+   covers.addEventListener('click', () => {
+   covers.classList.add('covered');
+   head.classList.add('heads');
+   
+   }
+   );
+   
+   covers.addEventListener('click', (e) => {
+   if(e.target.classList.contains('headers')){
+   covers.classList.remove('covered');
+   head.classList.remove('heads');
+   }
+   }
+   )
+   
+   });
+   
+   
+   
+   
   }
-}
 
 
-window.addEventListener('resize', requestResponsivity);
 
-requestResponsivity();
+
